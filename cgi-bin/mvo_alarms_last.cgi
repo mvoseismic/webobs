@@ -11,7 +11,7 @@
 use strict;
 
 # Alarm directory
-my $dir_alarms = '/mnt/mvofls2/Seismic_Data/monitoring_data/status/log';
+my $dir_alarms = '/mnt/mvofls2/Seismic_Data/monitoring_data/status/earthworm_alarm_log';
 
 # Number of alarms to print
 my $last_n = 5;
