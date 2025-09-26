@@ -12,6 +12,9 @@ use strict;
 use warnings;
 use Sys::Hostname;
 
+my $hostname;           # Machine being run on, set to either 'webobs' or 'opsproc3'
+$hostname = hostname();
+
 my $dir_data; 			# Where we look for data in file hierarchy
 
 # Variables used in looking for plots
@@ -40,8 +43,9 @@ for $plot_type (@plot_types) {
 	$dbfile =~ s/^\///;
 	$dbfile =~ s/\/\./\./;
 	$dbfile =~ s/\//_/g;
-	my $command = join( ' ', '/usr/bin/updatedb -v -l 0 -U', $dir_data, '-o', $dbfile );
-        print $command, "\n";
+	my $command;
+    $command = join( ' ', '/usr/bin/updatedb -l 0 -U', $dir_data, '-o', $dbfile );
+    print $command, "\n";
 	system( $command );
 		
 
