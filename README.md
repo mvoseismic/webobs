@@ -100,6 +100,12 @@ These text files summarize what plots are available and are updated once a day.
 | -------------| -------------------|
 | *copy_heli.sh* | Script to copy today's helicorder plots to *notWebobs*. Runs as a cronjob every minute. Currently disabled.|
 
+## xhelis
+
+* HTML file to display multiple helicorder plots in a formst for the homedisplay tablets.
+* xhelis.html.1 is currently installed on *webobs*.
+
+
 ## Author
 
 Roderick Stewart, Dormant Services Ltd
